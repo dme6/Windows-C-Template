@@ -13,5 +13,5 @@ clean:
 	@echo Cleaned.
 
 .PHONY: run
-run:
+run: $(EXE)
 	@$(EXE)
