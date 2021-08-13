@@ -1,7 +1,8 @@
 CC   := gcc
 SRC  := $(shell dir /S /B .\src\*.c)
 EXE  := ./bin/main.exe
-LIBS := # -lws2_32
+LIBS :=
+ARGS :=
 
 $(EXE): $(SRC)
 	@$(CC) $^ -o $@ $(LIBS)
@@ -14,4 +15,4 @@ clean:
 
 .PHONY: run
 run: $(EXE)
-	@$(EXE)
+	@$(EXE) $(ARGS)
